@@ -494,9 +494,8 @@ footer { background: var(--card-bg); }
   .theme-toggle-btn { bottom: 12px; left: 10px; padding: 8px 10px; font-size: .74rem; }
   .btn-whatsapp { bottom: 12px; right: 10px; width: 44px; height: 44px; }
 }
-@media (max-width: 680px) { /* Cambiado de 760px a 680px para que en PC grande siempre use una sola línea */
-  body { padding-top: 135px; }
-  /* ... resto del código responsive ... */
+@media (max-width: 650px) {
+  /* Estilos para celulares */
 }
 
 
