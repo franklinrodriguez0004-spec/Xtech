@@ -35,12 +35,13 @@ body {
 html { scroll-behavior: smooth; scroll-padding-top: 195px; }
 /* Encabezado fijo: permanece arriba mientras se desplaza la página. */
 header {
+  
   position: fixed; top: 0; left: 0; width: 100%;
   background: #0d1b2a; border-bottom: 1px solid #1b263b; z-index: 1000;
 }
 /* Contenedor interno del encabezado: organiza logo, navegación y botones. */
 .principal {
-  max-width: 1200px; margin: auto; padding: 12px 30px;
+  max-width: 200px; margin: auto; padding: 12px 30px;
   display: flex; flex-direction: column; align-items: center; gap: 9px;
 }
 /* LOGO XTECH HECHO CON TEXTO */
@@ -79,7 +80,7 @@ body.dark-mode .logo-nombre {
         font-size: 35px;
     }
 }
-.logo-header:hover { transform: scale(2.06); }
+.logo-header:hover { transform: scale(0.70); }
 /* Menú de navegación: lista horizontal que puede pasar a otra línea. */
 .menu ul {
   list-style: none; display: flex; flex-wrap: wrap; justify-content: center;
