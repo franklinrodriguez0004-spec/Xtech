@@ -79,7 +79,7 @@ body.dark-mode .logo-nombre {
         font-size: 35px;
     }
 }
-.logo-header:hover { transform: scale(1.06); }
+.logo-header:hover { transform: scale(2.06); }
 /* Menú de navegación: lista horizontal que puede pasar a otra línea. */
 .menu ul {
   list-style: none; display: flex; flex-wrap: wrap; justify-content: center;
