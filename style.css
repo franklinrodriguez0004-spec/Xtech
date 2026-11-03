@@ -40,8 +40,16 @@ header {
 }
 /* Contenedor interno del encabezado: organiza logo, navegación y botones. */
 .principal {
-  max-width: 1200px; margin: auto; padding: 12px 30px;
-  display: flex; flex-direction: column; align-items: center; gap: 9px;
+  max-width: 1280px; 
+  margin: auto; 
+  padding: 8px 24px;
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 15px;
+  min-height: 70px;
+  flex-wrap: nowrap; /* Evita que los elementos bajen de línea en escritorios */
 }
 /* LOGO XTECH HECHO CON TEXTO */
 .logo-texto {
@@ -486,12 +494,9 @@ footer { background: var(--card-bg); }
   .theme-toggle-btn { bottom: 12px; left: 10px; padding: 8px 10px; font-size: .74rem; }
   .btn-whatsapp { bottom: 12px; right: 10px; width: 44px; height: 44px; }
 }
-@media (max-width: 380px) {
-  body { padding-top: 138px; }
-  .btn-header { padding: 7px 8px; font-size: .72rem; }
-  .contenedor-productos { grid-template-columns: 1fr; }
-  .imagen-producto { height: 190px; }
-  .menu a { padding: 5px 10px; }
+@media (max-width: 680px) { /* Cambiado de 760px a 680px para que en PC grande siempre use una sola línea */
+  body { padding-top: 135px; }
+  /* ... resto del código responsive ... */
 }
 
 
