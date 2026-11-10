@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Documento principal de XTECH. La estructura está en HTML; el diseño en style.css y la lógica en app.js. -->
+<!-- Documento principal de XTECH. La estructura está en HTML; el diseño en style.css y la lógica en los módulos de la carpeta js/. -->
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -85,20 +85,25 @@
           </ul>
         </div>
 
-        <form class="formulario-consulta" action="https://formspree.io/f/tu-id-aqui" method="POST">
+        <!-- novalidate desactiva los avisos del navegador: la validación se hace en js/contacto.js -->
+        <form id="form-contacto" class="formulario-consulta" novalidate>
           <div class="campo">
             <label for="nombre">Nombre Completo</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name">
+            <small class="error-campo" id="error-nombre" role="alert"></small>
           </div>
           <div class="campo">
             <label for="email">Correo Electrónico</label>
-            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" autocomplete="email">
+            <small class="error-campo" id="error-email" role="alert"></small>
           </div>
           <div class="campo">
             <label for="mensaje">Consulta</label>
-            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje o consulta..." required></textarea>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje o consulta..."></textarea>
+            <small class="error-campo" id="error-mensaje" role="alert"></small>
           </div>
           <button type="submit" class="btn-enviar">Enviar Consulta</button>
+          <p id="contacto-exito" class="mensaje-exito" role="status" hidden></p>
         </form>
       </div>
     </section>
@@ -177,8 +182,7 @@
 
   <div id="toast-container" class="toast-container" aria-live="polite"></div>
 
-  <!-- Primero cargamos los datos; después app.js utiliza el array productos. -->
-  <script src="datos.js"></script>
-  <script src="app.js"></script>
+  <!-- type="module" activa los ES Modules: main.js importa al resto de los archivos de js/. -->
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
