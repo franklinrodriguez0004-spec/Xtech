@@ -29,7 +29,7 @@ export function renderizarCatalogo() {
   // Primero comprobamos si cada producto pertenece a la categoría elegida
   // y si su nombre o descripción contiene el texto buscado.
   const productosFiltrados = productos.filter(producto => {
-    const coincideCategoria = filtroActual === "todos" || producto.categoria === filtroActual;
+   const coincideCategoria = busquedaActual.trim() !== "" || filtroActual === "todos" || producto.categoria === filtroActual;
     const texto = busquedaActual.toLowerCase();
     const coincideBusqueda = producto.nombre.toLowerCase().includes(texto) ||
       producto.descripcion.toLowerCase().includes(texto);
