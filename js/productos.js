@@ -33,6 +33,7 @@ export function renderizarCatalogo() {
     const texto = busquedaActual.toLowerCase();
     const coincideBusqueda = producto.nombre.toLowerCase().includes(texto) ||
       producto.descripcion.toLowerCase().includes(texto);
+      producto.categoria.toLowerCase().includes(texto);
     return coincideCategoria && coincideBusqueda;
   });
 
